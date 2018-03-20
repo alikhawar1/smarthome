@@ -8,8 +8,9 @@ pipeline {
    stages {
       stage('smarthome-build') { 
         steps {
-              sh 'chmod +x build.sh'
-            sh './build.sh'    
+              //sh 'chmod +x build.sh'
+            //sh './build.sh'    
+           sh ' mvn clean install'
         }
       }
    }
