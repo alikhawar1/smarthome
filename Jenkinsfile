@@ -7,10 +7,8 @@ pipeline {
    
    stages {
       stage('smarthome-build') { 
-          environment {
-                  MAVEN_OPTS = "Xmx1g"
-                    } 
-        steps {
+      MAVEN_OPTS = "Xmx1g"
+   steps {
               //sh 'chmod +x build.sh'
             //sh './build.sh'    
            sh 'mvn -DskipTests=true clean install'
