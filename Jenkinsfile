@@ -7,10 +7,10 @@ pipeline {
    
    stages {
       stage('smarthome-build') { 
-        steps {
-           environment {
+          environment {
                   MAVEN_OPTS = "Xms512m -Xmx1024m"
                     } 
+        steps {
               //sh 'chmod +x build.sh'
             //sh './build.sh'    
            sh ' mvn install'
