@@ -10,7 +10,7 @@ pipeline {
    steps {
               //sh 'chmod +x build.sh'
             //sh './build.sh'    
-           sh 'mvn -DskipTests=true clean install'
+           sh 'mvn  build'
         }
       }
    }
